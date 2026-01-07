@@ -1,7 +1,7 @@
 const { protect } = require('../../../lib/api/middleware/auth');
 const Task = require('../../../lib/api/models/Task');
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   // CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -116,4 +116,4 @@ module.exports = async (req, res) => {
     console.error('Tasks error:', error);
     return res.status(500).json({ success: false, message: error.message || 'Internal server error' });
   }
-};
+}

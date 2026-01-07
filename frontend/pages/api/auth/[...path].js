@@ -44,7 +44,7 @@ const updatePasswordValidation = [
   body('newPassword').notEmpty().isLength({ min: 6 }),
 ];
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   // CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -195,4 +195,4 @@ module.exports = async (req, res) => {
     console.error('Auth error:', error);
     return res.status(500).json({ success: false, message: error.message || 'Internal server error' });
   }
-};
+}
