@@ -1,8 +1,8 @@
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const { admin } = require('../../../api/config/db');
-const { protect } = require('../../../api/middleware/auth');
-const User = require('../../../api/models/User');
+const { admin } = require('../../../lib/api/config/db');
+const { protect } = require('../../../lib/api/middleware/auth');
+const User = require('../../../lib/api/models/User');
 
 // Validation helper
 const runValidation = async (req, validations) => {

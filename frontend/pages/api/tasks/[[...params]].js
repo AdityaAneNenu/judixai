@@ -1,5 +1,5 @@
-const { protect } = require('../../../api/middleware/auth');
-const Task = require('../../../api/models/Task');
+const { protect } = require('../../../lib/api/middleware/auth');
+const Task = require('../../../lib/api/models/Task');
 
 module.exports = async (req, res) => {
   // CORS
