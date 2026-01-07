@@ -63,7 +63,7 @@ const User = {
   // Generate JWT token
   getSignedJwtToken(userId) {
     return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
-      expiresIn: process.env.JWT_EXPIRE || '30d',
+      expiresIn: process.env.JWT_EXPIRE,
     });
   },
 };

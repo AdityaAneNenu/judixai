@@ -30,7 +30,7 @@ const initializeFirebase = () => {
     return admin.firestore();
   } catch (error) {
     console.error('Firebase initialization error:', error.message);
-    throw error;
+    process.exit(1);
   }
 };
 

@@ -44,7 +44,7 @@ export default function TasksPage() {
   // Filters
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState(
-    searchParams.get('status') || 'all'
+    searchParams?.get('status') || 'all'
   );
   const [priorityFilter, setPriorityFilter] = useState('all');
   const [sortBy, setSortBy] = useState('createdAt');
@@ -58,7 +58,7 @@ export default function TasksPage() {
 
   // Open modal from URL param
   useEffect(() => {
-    if (searchParams.get('openModal') === 'true') {
+    if (searchParams?.get('openModal') === 'true') {
       openCreateModal();
     }
   }, [searchParams]);
