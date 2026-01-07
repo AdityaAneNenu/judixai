@@ -1,44 +1,6 @@
 {
-  "rewrites": [
-    {
-      "source": "/api/auth/register",
-      "destination": "/api/auth/register.js"
-    },
-    {
-      "source": "/api/auth/login",
-      "destination": "/api/auth/login.js"
-    },
-    {
-      "source": "/api/auth/me",
-      "destination": "/api/auth/me.js"
-    },
-    {
-      "source": "/api/auth/profile",
-      "destination": "/api/auth/profile.js"
-    },
-    {
-      "source": "/api/auth/password",
-      "destination": "/api/auth/password.js"
-    },
-    {
-      "source": "/api/auth/google",
-      "destination": "/api/auth/google.js"
-    },
-    {
-      "source": "/api/tasks",
-      "destination": "/api/tasks/index.js"
-    },
-    {
-      "source": "/api/tasks/stats",
-      "destination": "/api/tasks/stats.js"
-    },
-    {
-      "source": "/api/tasks/:id",
-      "destination": "/api/tasks/[id].js"
-    }
-  ],
   "functions": {
-    "api/**/*.js": {
+    "pages/api/**/*.js": {
       "memory": 1024,
       "maxDuration": 10
     }
