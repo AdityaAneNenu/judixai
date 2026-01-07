@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/auth/register",
+      "destination": "/api/auth/register.js"
+    },
+    {
+      "source": "/api/auth/login",
+      "destination": "/api/auth/login.js"
+    },
+    {
+      "source": "/api/auth/me",
+      "destination": "/api/auth/me.js"
+    },
+    {
+      "source": "/api/auth/profile",
+      "destination": "/api/auth/profile.js"
+    },
+    {
+      "source": "/api/auth/password",
+      "destination": "/api/auth/password.js"
+    },
+    {
+      "source": "/api/auth/google",
+      "destination": "/api/auth/google.js"
+    },
+    {
+      "source": "/api/tasks",
+      "destination": "/api/tasks/index.js"
+    },
+    {
+      "source": "/api/tasks/stats",
+      "destination": "/api/tasks/stats.js"
+    },
+    {
+      "source": "/api/tasks/:id",
+      "destination": "/api/tasks/[id].js"
+    }
+  ],
+  "env": {
+    "FIREBASE_PROJECT_ID": "@firebase_project_id",
+    "FIREBASE_CLIENT_EMAIL": "@firebase_client_email",
+    "FIREBASE_PRIVATE_KEY": "@firebase_private_key",
+    "JWT_SECRET": "@jwt_secret",
+    "JWT_EXPIRE": "@jwt_expire"
+  }
+}
